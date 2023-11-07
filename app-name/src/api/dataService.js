@@ -14,5 +14,5 @@ export const fetchpersons = async () => {
 }
 export const fetteype = async () => {
     // Utiliza Axios para hacer una solicitud GET a la URL de grupos.
-    return axios.get(`${BASE_URL}/type`)
+    return axios.get(`${BASE_URL}/tipogrupo`)
 }

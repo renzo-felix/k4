@@ -22,6 +22,10 @@ const routes = [
     {
         path: '/home',
         element: HomePage
+    },
+    {
+        path: '/tipogrupo',
+        element: Tipogrupo
     }
     
 ];
