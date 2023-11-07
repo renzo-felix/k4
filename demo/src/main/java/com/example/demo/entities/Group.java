@@ -3,6 +3,8 @@ package com.example.demo.entities;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -13,6 +15,7 @@ public class Group {
     private Long id;
     private String name;
 
+    @JsonIgnore
     @ManyToMany
     @JoinTable(
         name = "person_group",

@@ -1,7 +1,12 @@
-import { HomePage, TasksPage, ProfilePage, GroupsPage } from './pages';
+import { HomePage, TasksPage, ProfilePage, GroupsPage,PersonsPage } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
 
 const routes = [
+
+    {
+        path: '/persons',
+        element: PersonsPage
+    },
     {
         path: "/groups",
         element: GroupsPage
@@ -18,6 +23,7 @@ const routes = [
         path: '/home',
         element: HomePage
     }
+    
 ];
 
 export default routes.map(route => {
