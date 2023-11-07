@@ -15,6 +15,9 @@ public class Group {
     private Long id;
     private String name;
 
+    @ManyToOne
+    private TipoGrupo tipoGrupo;
+
     @JsonIgnore
     @ManyToMany
     @JoinTable(
@@ -27,9 +30,10 @@ public class Group {
     // Constructors, getters, and setters
     public Group() {}
 
-    public Group(String name, Set<Person> persons) {
+    public Group(String name, Set<Person> persons, TipoGrupo tipoGrupo) {
         this.name = name;
         this.persons = persons;
+        this.tipoGrupo = tipoGrupo;
     }
 
     public Long getId() {
@@ -40,6 +44,7 @@ public class Group {
         return name; 
     }
 
+    @JsonIgnore
     public Set<Person> getPersons() {
         return persons;
     }
@@ -54,5 +59,13 @@ public class Group {
 
     public void setPersons(Set<Person> persons) {
         this.persons = persons;
+    }
+
+    public TipoGrupo getTipoGrupo() {
+        return tipoGrupo;
+    }
+
+    public void setTipoGrupo(TipoGrupo tipoGrupo) {
+        this.tipoGrupo = tipoGrupo;
     }
 }

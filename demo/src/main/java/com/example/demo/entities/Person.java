@@ -36,6 +36,7 @@ public class Person {
         return name; 
     }
 
+    @JsonIgnore
     public Set<Group> getGroups() {
         return groups;
     }
