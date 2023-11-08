@@ -15,7 +15,7 @@ public class Group {
     private Long id;
     private String name;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     private TipoGrupo tipoGrupo;
 
     @JsonIgnore

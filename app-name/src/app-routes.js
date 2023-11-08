@@ -1,4 +1,4 @@
-import { HomePage, TasksPage, ProfilePage, GroupsPage,PersonsPage } from './pages';
+import { HomePage, TasksPage, TipogrupoPage, ProfilePage, GroupsPage, PersonsPage } from './pages';
 import { withNavigationWatcher } from './contexts/navigation';
 
 const routes = [
@@ -25,7 +25,7 @@ const routes = [
     },
     {
         path: '/tipogrupo',
-        element: Tipogrupo
+        element: TipogrupoPage
     }
     
 ];

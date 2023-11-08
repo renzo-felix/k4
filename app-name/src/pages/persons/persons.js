@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react"
-import { fetchpersons } from "../../api/dataService"
+import { useEffect, useState } from "react";
+import { fetchpersons } from "../../api/dataService";
 import 'devextreme/data/odata/store';
 import DataGrid, { Column } from 'devextreme-react/data-grid';
 
 export default function Persons() {
   // Se declara un estado llamado 'personssWithPersonCount' utilizando useState.
-  const [ setpersonssWithPersonCount,personssWithPersonCount] = useState();
+  const [personssWithPersonCount, setPersonssWithPersonCount] = useState([]);
 
   // Utiliza useEffect para realizar la solicitud a la API cuando el componente se monta.
   useEffect(() => {
@@ -18,11 +18,10 @@ export default function Persons() {
         console.log(personsData);
 
         // Modifica el estado 'personssWithPersonCount' transformando los datos de grupos.
-        setpersonssWithPersonCount(personsData.map(person => ({
+        setPersonssWithPersonCount(personsData.map(person => ({
           id: person.id,
-          name: person.name,
-           
-        })))
+          name: person.name
+        })));
       })
       .catch((error) => {
         console.log(error);
@@ -42,12 +41,6 @@ export default function Persons() {
         
         {/* Define la segunda columna con el campo 'name'. */}
         <Column dataField="name" />
-        
-        {/* Define la tercera columna con el campo 'personCount' y un título personalizado 'Number of Persons'. */}
-        
       </DataGrid>
-
   )
 }
-
-

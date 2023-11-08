@@ -3,7 +3,8 @@ import { fetchtipogrupo } from "../../api/dataService"
 import 'devextreme/data/odata/store';
 import DataGrid, { Column } from 'devextreme-react/data-grid';
 
-export default function tipogrupo() {
+
+export default function Tipogrupo() {
     // Se declara un estado llamado 'groupsWithPersonCount' utilizando useState.
     const [groupsWithPersonCount, setGroupsWithPersonCount] = useState();
   

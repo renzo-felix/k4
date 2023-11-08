@@ -21,7 +21,7 @@ export default function Group() {
                 setGroupsWithPersonCount(groupsData.map(group => ({
                     id: group.id,
                     name: group.name,
-                    tipoGrupo: group.tipoGrupo.tipo,
+                    tipoGrupo: group.tipoGrupo ? group.tipoGrupo.tipo : 'Tipo no definido',
                     personCount: group.persons ? group.persons.length : 0
                 })))
             })
